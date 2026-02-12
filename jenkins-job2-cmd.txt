@@ -1,0 +1,10 @@
+set -e
+echo "fetching integration branch"
+git fetch origin Integration
+echo "switching to integration"
+git switch Integration
+echo "merging the content to integration"
+git merge --no-ff origin/featurebranch-1 -m "Auto merge to Integration branch from featurebranch-1"
+echo "Pushing to integration branch"
+git push -u origin Integration
+echo "merge successful"
