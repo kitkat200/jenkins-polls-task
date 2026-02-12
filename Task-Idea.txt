@@ -1,0 +1,6 @@
+create a github repo
+create multiple branches : featureBranch-1, featureBranch-2, Integration and Master branches
+add some content to feature branch-1 and feature branch-2
+create a jenkins job that will push the changes from featurebranch-1 to Integration via polls
+create a jenkins job that will push the changes from featurebranch-2 to Integration via polls
+create a jenkins job that will polls the integration branch for any changes, perform the statuc code anyalysis and push to master
