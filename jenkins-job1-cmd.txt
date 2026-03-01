@@ -1,4 +1,9 @@
-set -e
+git config --global user.name "Raj Patil"
+git config --global user.email "raj@example.com"
+git remote set-url origin https://kitkat200:token:@github.com/kitkat200/jenkins-polls-task.git
+git config --global --add safe.directory /var/lib/jenkins/workspace/$JOB_NAME
+git config -l
+git remote -v
 echo "fetching integration branch"
 git fetch origin Integration
 echo "switching to integration"
