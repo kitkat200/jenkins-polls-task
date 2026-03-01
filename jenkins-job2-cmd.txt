@@ -1,10 +1,15 @@
-set -e
+git config --global user.name "Raj Patil"
+git config --global user.email "raj@example.com"
+git remote set-url origin https://kitkat200:token:@github.com/kitkat200/jenkins-polls-task.git
+git config --global --add safe.directory /var/lib/jenkins/workspace/$JOB_NAME
+git config -l
+git remote -v
 echo "fetching integration branch"
 git fetch origin Integration
 echo "switching to integration"
 git switch Integration
 echo "merging the content to integration"
-git merge --no-ff origin/featurebranch-1 -m "Auto merge to Integration branch from featurebranch-1"
+git merge  origin/featurebranch-1
 echo "Pushing to integration branch"
 git push -u origin Integration
 echo "merge successful"
